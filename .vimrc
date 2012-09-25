@@ -34,7 +34,9 @@ set scrolljump=1
 set scrolloff=3
 set gdefault
 
-let g:Powerline_symbols = 'fancy'
+"need to patch my font for this to work
+"let g:Powerline_symbols = 'fancy'
+
 call pathogen#infect()
 
 vmap p "_dP
