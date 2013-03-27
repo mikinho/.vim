@@ -22,6 +22,7 @@ set fmr={,}
 set fdm=marker
 set nofen
 set path=.
+"lots of speed up, but no guarentees the file is actually on disk at exit
 set nofsync
 set ttyfast
 set noruler
