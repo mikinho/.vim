@@ -74,7 +74,7 @@ syntax on               "Do Syntax hilighting
 
 """"""""""""
 "Searching stuff
-"set nohlsearch     "Don't hilight searches, man, I hate that
+set hlsearch
 set ignorecase      "for pattern matching
 set smartcase       "if I use uppercase, match case sensitive
 set incsearch       "show us matches immeadiatly
