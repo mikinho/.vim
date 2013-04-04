@@ -14,13 +14,12 @@ set title                       "Let VIM manage the term title
 set titlestring=%t\ %y\ %r\ %m  "Set a useful term title            
 set titleold=Terminal           "Get rid of that stupid flying message
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc       "Don't tab complete this much
-set viminfo='20,\"50
-set nu
-set smd
-set et
-set fmr={,}
-set fdm=marker
-set nofen
+set viminfo='20,\"50            "How much history/marks to store in viminfo
+set number                      "Show line numbers
+set showmode                    "Show editing mode in status bar
+set fmr={,}                     "Fold marker
+set fdm=marker                  "Fold method
+set nofen                       "But disable folding by default
 set path=.
 "lots of speed up, but no guarentees the file is actually on disk at exit
 set nofsync
@@ -40,6 +39,7 @@ set gdefault
 
 call pathogen#infect()
 
+" when pasting don't replace yank buffer with what you have highlighted
 vmap p "_dP
 vmap P "_dP
 
@@ -68,13 +68,13 @@ set textwidth=78        "Text width
 set showmatch           "Blink to show the {} and () matches
 set matchtime=3         "make it a quick blink though
 set formatoptions=crq2  "Do some neat comment stuff for us
-set expandtab
+set expandtab           "Expand tabs to spaces
 autocmd FileType make setlocal noexpandtab
 syntax on               "Do Syntax hilighting 
 
 """"""""""""
 "Searching stuff
-set hlsearch
+set hlsearch        "highlight search matches
 set ignorecase      "for pattern matching
 set smartcase       "if I use uppercase, match case sensitive
 set incsearch       "show us matches immeadiatly
